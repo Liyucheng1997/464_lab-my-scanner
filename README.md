@@ -36,3 +36,5 @@ node server/server.js
 - `index.html`、`css/`、`js/`、`sw.js`：网页应用（原生 JS，无构建步骤）
 - `server/server.js`：同步服务端（零依赖）
 - `deploy/`：服务器上的 systemd、nginx 配置和更新脚本
+
+源码仓库：https://github.com/Liyucheng1997/scanner-pwa
