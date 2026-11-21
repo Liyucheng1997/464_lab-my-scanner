@@ -1,0 +1,18 @@
+# 安装到 /etc/systemd/system/app-scanner.service
+[Unit]
+Description=app-scanner (扫描仪 · 网页与多设备同步)
+After=network.target
+
+[Service]
+User=ubuntu
+WorkingDirectory=/opt/apps/scanner
+Environment=HOST=127.0.0.1
+Environment=PORT=4471
+Environment=DATA_DIR=/opt/apps/scanner/data
+ExecStart=/usr/bin/env node server/server.js
+Restart=always
+RestartSec=3
+MemoryMax=300M
+
+[Install]
+WantedBy=multi-user.target
